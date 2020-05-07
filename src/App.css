@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+body {
+  font-family: "Open Sans", serif;
+}
+
+.wrapper {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+.weatherScreen {
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.main {
+  height: 55vh;
+  box-shadow: 0px 2px 80px -20px rgba(0, 0, 0, 0.5);
+  width: auto;
+  margin: 0 auto;
+}
+
+.info {
+  height: 55vh;
+  background: url("./img/jonathan-cooper-sCBKuXagfx4-unsplash.jpg") center
+    center no-repeat;
+  background-blend-mode: multiply;
+  background-color: #bbb8b8;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000;
+}
+
+.form {
+  height: 55vh;
+  padding-top: 60px;
+  padding-left: 60px;
+  border: 2px solid black;
+  background-color: rgb(247, 245, 245);
+}
+
+input[type="text"] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 2px black;
+  width: 50%;
+  padding-bottom: 4px;
+  color: black;
+  font-weight: lighter;
+  margin-bottom: 30px;
+  margin-right: 25px;
+  font-size: 20px;
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #103a65;
+}
+
+input::-moz-placeholder {
+  color: #103a65;
+}
+
+button {
+  border: 2px solid rgb(63, 63, 63);
+  border-bottom: 4px solid rgb(63, 63, 63);
+  padding: 6px 10px;
+  margin: 0 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: rgb(97, 96, 96);
+  color: #fff;
+  outline: none !important;
+}
+
+button:hover {
+  border-bottom: 2px solid black;
+  position: relative;
+  top: 2px;
+}
+
+button:active {
+  border-bottom: 2px solid transparent;
+  border-color: transparent;
+  position: relative;
+  top: 2px;
+}
+
+.info h2 {
+  font-size: 3em;
+  color: white;
+}
+
+.info p {
+  color: white;
+  font-weight: bold;
+}
+
+.infoWeath {
+  width: 60%;
+  font-size: 20px;
+  color: black;
+}
+
+.error {
+  color: #041f3c;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1140px) {
+  .wrapper {
+    padding-bottom: 10rem;
+  }
+  .weatherScreen {
+    grid-template-columns: 1fr;
+  }
+  .weatherScreen .info {
+    height: 150px;
+  }
+  .weatherScreen .info h2 {
+    font-size: 3rem;
+  }
+  .weatherScreen .info p {
+    font-size: 1rem;
+  }
+
+  .weatherScreen .form {
+    height: 55vh;
+    padding-top: 30px;
+  }
+
+  .weatherScreen .form div {
+    font-size: 1.1rem;
+    margin-left: 1.4rem;
+  }
+  button {
+    padding: 5px 8px;
+    margin-right: 45px;
+    cursor: pointer;
+  }
+}
